@@ -27,14 +27,13 @@ csv()
 
 function performRegression() {
     regressionModel = new SLR(X, y)
-    console.log(regressionModel.toString(2))
+    console.log(regressionModel.toString(3))
     predictOutput()
 }
 
 function dressData() {
     csvData.forEach((row) => {
-        // console.log(row)1
-        X.push(f(Number(row.radio)))
+        X.push(f(row.radio))
         y.push(f(row.sales))
     })
 }
